@@ -1,0 +1,99 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { company } from "../data/site";
+---
+
+<Base
+  title="Kurumsal | CNK Endüstriyel"
+  description="CNK Endüstriyel Akaryakıt ve Ürünleri Dağıtım Pazarlama Ltd. Şti. Tuzla merkezli, İstanbul Ticaret Odası’nda faal kayıtlı bir toptan yakıt ve ürün ticaret şirketidir."
+  path="/kurumsal"
+  hero
+>
+  <PageHero
+    kicker="Kurumsal"
+    title="Kurumsal kimlik ve faaliyet tanımı"
+    text="Şirket bilgileri, kamuya açık ticaret odası kaydı ve tescilli unvan esas alınarak aktarılır. Doğrulanmayan iddialar kullanılmaz."
+    image="/images/corporate.jpg"
+    alt="Kurumsal ofis ve iş merkezi"
+  />
+
+  <section class="page-block">
+    <div class="wrap split">
+      <div>
+        <span class="kicker dark">Unvan</span>
+        <h2 class="section-title">Tescilli şirket yapısı</h2>
+      </div>
+      <div class="prose">
+        <p>
+          <strong>{company.legalName}</strong>, İstanbul Ticaret Odası
+          kayıtlarında Tuzla semtinde <strong>faal</strong> üye olarak yer
+          alır. Sicil no: <strong>{company.itoSicil}</strong>.
+        </p>
+        <p>
+          Şirket, İTO <strong>27. Grup Akaryakıt</strong> meslek komitesi
+          kapsamında listelenir. Ana NACE kodu
+          <strong>{company.nace}</strong> — {company.naceTitle}.
+        </p>
+        <p>
+          Bu kod, perakende akaryakıt istasyonu işletmeciliğinden farklı olarak
+          toptan ticareti tanımlar. CNK Endüstriyel’in dijital vitrini de bu
+          B2B konuma göre kurgulanmıştır.
+        </p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="fact-row">
+        <div class="fact">
+          <span>Merkez</span>
+          <b>{company.location}</b>
+        </div>
+        <div class="fact">
+          <span>Üyelik durumu</span>
+          <b>{company.itoStatus}</b>
+        </div>
+        <div class="fact">
+          <span>Meslek grubu</span>
+          <b>Akaryakıt · toptan ticaret</b>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-block alt">
+    <div class="wrap split">
+      <div class="media" style="min-height: 420px;">
+        <img
+          src="/images/manufacturing.jpg"
+          alt="Endüstriyel çalışma ortamı"
+          loading="lazy"
+        />
+      </div>
+      <div>
+        <span class="kicker dark">Yaklaşım</span>
+        <h2 class="section-title" style="margin-bottom: 22px;">
+          Net, kurumsal ve ölçülü iletişim
+        </h2>
+        <div class="prose">
+          <p>
+            Kamuya açık kaynaklarda kuruluş yılı, çalışan sayısı, filo büyüklüğü,
+            depo kapasitesi, sertifika veya referans listesi doğrulanmamıştır.
+            Bu nedenle bu sayfada bu tür iddialar yer almaz.
+          </p>
+          <p>
+            Kurumsal duruşumuz; faaliyet alanını açıkça ifade etmek, ürün
+            kapsamını abartmadan anlatmak ve teklif sürecini ihtiyaç üzerinden
+            yürütmektir.
+          </p>
+          <p>
+            Açık cadde adresi, telefon ve e-posta kamuya açık kayıtlarda teyit
+            edilemediği için iletişim sayfasında form üzerinden talep toplanır.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand image="/images/plant.jpg" />
+</Base>

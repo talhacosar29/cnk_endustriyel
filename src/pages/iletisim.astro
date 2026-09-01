@@ -1,0 +1,109 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+import { company } from "../data/site";
+---
+
+<Base
+  title="İletişim | CNK Endüstriyel"
+  description="CNK Endüstriyel ile teklif ve bilgi talebi için iletişime geçin. Şirket Tuzla, İstanbul kaydıyla faaldir."
+  path="/iletisim"
+  hero
+>
+  <PageHero
+    kicker="İletişim"
+    title="Bizimle iletişime geçin"
+    text="Teklif ve bilgi talepleriniz için formu doldurun. Kamuya açık kayıtlarda doğrulanmış telefon veya e-posta bulunmadığı için bu alanlar uydurulmamıştır."
+    image="/images/corporate.jpg"
+    alt="Kurumsal iletişim"
+  />
+
+  <section class="page-block">
+    <div class="wrap contact-grid">
+      <aside class="contact-aside">
+        <span class="kicker dark">CNK Endüstriyel</span>
+        <h2>Talebinizi iletin</h2>
+        <p class="lead">
+          Ürün grubu, tahmini ihtiyaç ve teslim beklentinizi yazmanız, doğru
+          dönüş için yeterlidir. Bu form demo amaçlıdır; gönderim sunucuya
+          kaydedilmez.
+        </p>
+        <div class="contact-facts">
+          <div>
+            <span>Şirket</span>
+            <strong>{company.legalName}</strong>
+          </div>
+          <div>
+            <span>Kayıtlı merkez</span>
+            <strong>{company.location}</strong>
+          </div>
+          <div>
+            <span>İTO sicil</span>
+            <strong>{company.itoSicil} · {company.itoStatus}</strong>
+          </div>
+          <div>
+            <span>Faaliyet</span>
+            <strong>NACE {company.nace}</strong>
+          </div>
+        </div>
+      </aside>
+
+      <div>
+        <form class="form" id="teklif-formu" novalidate>
+          <label>
+            Ad Soyad
+            <input type="text" name="ad" required autocomplete="name" />
+          </label>
+          <label>
+            Firma
+            <input type="text" name="firma" autocomplete="organization" />
+          </label>
+          <label>
+            Telefon
+            <input type="tel" name="telefon" autocomplete="tel" />
+          </label>
+          <label>
+            E-posta
+            <input type="email" name="eposta" required autocomplete="email" />
+          </label>
+          <label>
+            Mesaj
+            <textarea name="mesaj" rows="5" required></textarea>
+          </label>
+          <button class="btn btn-navy" type="submit">Teklif Talep Et</button>
+        </form>
+        <div class="form-success" id="form-success" role="status">
+          Talebiniz alındı. Bu demo ortamında form sunucuya gönderilmez; canlı
+          sitede iletişim bilgileri tamamlandığında yanıt süreci bağlanır.
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="map-frame">
+        <iframe
+          title="Tuzla, İstanbul haritası"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=Tuzla%2C%20%C4%B0stanbul&z=12&output=embed"
+        ></iframe>
+      </div>
+      <p class="map-caption">
+        Harita, İTO kaydındaki Tuzla / İstanbul konumunu ilçe düzeyinde
+        gösterir. Açık cadde adresi kamuya açık kaynaklarda teyit
+        edilmemiştir.
+      </p>
+    </div>
+  </section>
+</Base>
+
+<script>
+  const form = document.getElementById("teklif-formu");
+  const success = document.getElementById("form-success");
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    form.classList.add("is-sent");
+    success?.classList.add("is-visible");
+    if (success) success.style.display = "block";
+  });
+</script>

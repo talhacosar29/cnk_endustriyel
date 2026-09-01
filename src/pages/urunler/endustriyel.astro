@@ -1,0 +1,82 @@
+---
+import Base from "../../layouts/Base.astro";
+import PageHero from "../../components/PageHero.astro";
+import CtaBand from "../../components/CtaBand.astro";
+---
+
+<Base
+  title="Endüstriyel Ürünler | CNK Endüstriyel"
+  description="CNK Endüstriyel unvanı, akaryakıtın yanı sıra endüstriyel ürün dağıtımı ve pazarlamasını da kapsar. Ürün grubu talep üzerine netleştirilir."
+  path="/urunler/endustriyel"
+  hero
+>
+  <PageHero
+    kicker="Ürünler"
+    title="Endüstriyel ürünler"
+    text="Şirket unvanındaki “endüstriyel ürünler” ifadesi, akaryakıt tedarikinin yanında kurumsal ürün dağıtımı ve pazarlamasını da işaret eder. Detaylı katalog kamuya açık değildir."
+    image="/images/industrial.jpg"
+    alt="Endüstriyel tesis altyapısı"
+  />
+
+  <section class="page-block">
+    <div class="wrap split">
+      <div>
+        <span class="kicker dark">Kapsam</span>
+        <h2 class="section-title">İhtiyaca göre değerlendirilen ürün grubu</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Kamuya açık kaynaklarda marka, ambalaj veya teknik veri sayfası
+          düzeyinde doğrulanmış bir endüstriyel ürün kataloğu bulunmamaktadır.
+        </p>
+        <p>
+          Bu sayfa, uydurma ürün listesi yerine şirketin tescilli faaliyet
+          tanımına bağlı kalarak genel bir çerçeve sunar.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <article class="catalog-item">
+      <div class="media">
+        <img
+          src="/images/pipes.jpg"
+          alt="Endüstriyel proses hatları"
+          loading="lazy"
+        />
+      </div>
+      <div class="catalog-copy">
+        <h2>Endüstriyel tedarik</h2>
+        <p>
+          Dağıtım ve pazarlama, şirket unvanının parçasıdır. Endüstriyel ürün
+          talepleri; kullanım alanı, miktar ve teslim beklentisi üzerinden
+          değerlendirilir.
+        </p>
+        <p class="notice">Kullanım alanı: işletmenin beyan ettiği operasyon ihtiyacı.</p>
+      </div>
+    </article>
+    <article class="catalog-item">
+      <div class="media">
+        <img
+          src="/images/warehouse.jpg"
+          alt="Endüstriyel depo"
+          loading="lazy"
+        />
+      </div>
+      <div class="catalog-copy">
+        <h2>İlgili ürünler</h2>
+        <p>
+          NACE 46.81.01 sınıfı, sıvı yakıtların yanında madeni yağ ve benzeri
+          ilgili ürünlerin toptan ticaretini de kapsayabilir. Mevcut ürünler
+          için doğrudan iletişime geçilmesi gerekir.
+        </p>
+        <p class="notice">
+          Bu bölüm, doğrulanmamış stok veya marka listesi içermez.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <CtaBand image="/images/factory.jpg" />
+</Base>

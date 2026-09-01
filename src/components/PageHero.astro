@@ -1,0 +1,23 @@
+---
+interface Props {
+  kicker?: string;
+  title: string;
+  text: string;
+  image: string;
+  alt: string;
+}
+
+const { kicker = "CNK Endüstriyel", title, text, image, alt } = Astro.props;
+---
+
+<section class="page-hero">
+  <div class="hero-bg">
+    <img src={image} alt={alt} />
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-content">
+    <span class="kicker reveal">{kicker}</span>
+    <h1 class="reveal reveal-d1">{title}</h1>
+    <p class="reveal reveal-d2">{text}</p>
+  </div>
+</section>

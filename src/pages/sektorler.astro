@@ -1,0 +1,70 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+import CtaBand from "../components/CtaBand.astro";
+---
+
+<Base
+  title="Sektörler | CNK Endüstriyel"
+  description="CNK Endüstriyel’in kamuya açık kayıtlardaki faaliyet alanı: Tuzla merkezli, sıvı yakıtlar ve ilgili ürünlerin toptan ticareti."
+  path="/sektorler"
+  hero
+>
+  <PageHero
+    kicker="Sektörler"
+    title="Faaliyet alanımız"
+    text="Doğrulanmış müşteri sektör listesi bulunmadığı için bu sayfada varsayımsal endüstri kartları yer almaz. Esas alınan, tescilli faaliyet tanımıdır."
+    image="/images/plant.jpg"
+    alt="Endüstriyel enerji tesisi"
+  />
+
+  <section class="sectors" style="background: var(--white);">
+    <div class="wrap">
+      <div class="sector-panel">
+        <div class="media">
+          <img
+            src="/images/hero.jpg"
+            alt="Yakıt depolama ve endüstriyel saha"
+            loading="lazy"
+          />
+        </div>
+        <div class="sector-copy">
+          <span class="kicker">Tescilli alan</span>
+          <h3>Sıvı yakıtların toptan ticareti</h3>
+          <p>
+            İstanbul Ticaret Odası kaydı, şirketi Akaryakıt meslek grubunda ve
+            NACE 46.81.01 koduyla listeler. Bu kod, sıvı yakıtlar ve bunlarla
+            ilgili ürünlerin toptan ticaretini tanımlar.
+          </p>
+        </div>
+      </div>
+
+      <div class="sector-panel" style="margin-top: 24px;">
+        <div class="sector-copy">
+          <span class="kicker">Konum</span>
+          <h3>Tuzla, İstanbul</h3>
+          <p>
+            İTO üye listesinde semt kaydı Tuzla’dır. Açık cadde adresi kamuya
+            açık kaynaklarda teyit edilemediği için harita, ilçe düzeyinde
+            gösterilir.
+          </p>
+        </div>
+        <div class="media">
+          <img
+            src="/images/energy.jpg"
+            alt="Enerji altyapısı"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <p class="sector-note">
+        Üretim, inşaat, otomotiv, tarım veya benzeri dikey sektörlerde hizmet
+        verildiği kamuya açık kayıtlarda doğrulanmamıştır. Bu nedenle bu
+        başlıklar “potansiyel kullanım alanı” olarak da listelenmemiştir.
+      </p>
+    </div>
+  </section>
+
+  <CtaBand />
+</Base>

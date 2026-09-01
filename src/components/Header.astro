@@ -1,0 +1,70 @@
+---
+import { nav } from "../data/site";
+
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+---
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="/" aria-label="CNK Endüstriyel ana sayfa">
+<svg class="logo-mark" viewBox="0 0 42 42" aria-hidden="true">
+          <rect width="42" height="42" fill="#D99A32" />
+          <text
+            x="21"
+            y="27"
+            text-anchor="middle"
+            fill="#0B1726"
+            font-size="13"
+            font-family="Manrope, Inter, sans-serif"
+            font-weight="800"
+            letter-spacing="0.5">CNK</text>
+        </svg>
+      <span class="logo-text">
+        <strong>CNK</strong>
+        <span>Endüstriyel</span>
+      </span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Ana menü">
+      {
+        nav.map((item) => (
+          <a
+            href={item.href}
+            aria-current={
+              item.href === "/"
+                ? path === "/"
+                  ? "page"
+                  : undefined
+                : path === item.href || path.startsWith(item.href + "/")
+                  ? "page"
+                  : undefined
+            }
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="header-cta">
+      <a class="btn btn-amber" href="/iletisim">Teklif Al</a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Menüyü aç"
+        aria-expanded="false"
+      >
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-mobile" aria-label="Mobil menü" aria-hidden="true" id="mobile-nav">
+  {
+    nav.map((item) => (
+      <a href={item.href}>{item.label}</a>
+    ))
+  }
+  <a class="btn btn-amber" href="/iletisim">Teklif Al</a>
+</nav>

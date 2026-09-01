@@ -1,0 +1,106 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+import CtaBand from "../components/CtaBand.astro";
+---
+
+<Base
+  title="Dağıtım ve Lojistik | CNK Endüstriyel"
+  description="CNK Endüstriyel’in dağıtım yaklaşımı. Toptan yakıt ve ürün tedarikinde talep, planlama ve teslimat adımlarına dair genel hizmet çerçevesi."
+  path="/dagitim"
+  hero
+>
+  <PageHero
+    kicker="Dağıtım & lojistik"
+    title="Doğru ürün, doğru zamanda"
+    text="Bu sayfa, şirketin kesin saha prosedürü olarak değil; toptan tedarik işinde izlenen genel bir hizmet yaklaşımı örneği olarak kurgulanmıştır."
+    image="/images/tanker.jpg"
+    alt="Akaryakıt tankeri yolda"
+  />
+
+  <section class="distribution">
+    <div class="wrap dist-layout">
+      <div>
+        <span class="kicker dark">Örnek süreç</span>
+        <h2 class="section-title">Tedarikten teslimata</h2>
+        <p class="lead" style="margin-top: 18px;">
+          Filo büyüklüğü, depo kapasitesi veya teslimat istatistiği kamuya açık
+          kayıtlarda yer almadığı için bu sayfada rakam kullanılmamıştır.
+        </p>
+        <div class="dist-steps">
+          <article class="dist-step">
+            <span class="num">01</span>
+            <div>
+              <h3>Talebin belirlenmesi</h3>
+              <p>
+                Ürün grubu, tahmini miktar, teslim noktası ve zaman beklentisi
+                alınır.
+              </p>
+            </div>
+          </article>
+          <article class="dist-step">
+            <span class="num">02</span>
+            <div>
+              <h3>Ürün tedariki</h3>
+              <p>
+                İhtiyaca uygun ürün kapsamı değerlendirilir. Uygun olmayan talep
+                net biçimde belirtilir.
+              </p>
+            </div>
+          </article>
+          <article class="dist-step">
+            <span class="num">03</span>
+            <div>
+              <h3>Planlama</h3>
+              <p>
+                Teslim koşulları, zamanlama ve lojistik çerçeve birlikte
+                netleştirilir.
+              </p>
+            </div>
+          </article>
+          <article class="dist-step">
+            <span class="num">04</span>
+            <div>
+              <h3>Teslimat</h3>
+              <p>
+                Anlaşılan kapsam doğrultusunda teslim süreci yürütülür.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="media dist-media">
+        <img
+          src="/images/trucks.jpg"
+          alt="Kara yolu dağıtım ve tır lojistiği"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="page-block alt">
+    <div class="wrap split">
+      <div class="media" style="min-height: 380px;">
+        <img
+          src="/images/warehouse.jpg"
+          alt="Lojistik depo"
+          loading="lazy"
+        />
+      </div>
+      <div class="prose">
+        <h2 class="section-title">Kurumsal ölçekte hareket</h2>
+        <p>
+          Şirket, perakende istasyon ağı iddiası taşımaz. Kayıtlı faaliyet,
+          toptan ticaret ve unvandaki dağıtım-pazarlama tanımıdır.
+        </p>
+        <p>
+          Bu nedenle görsel dil; pompa adası değil, endüstriyel lojistik, tank
+          sahası ve kara yolu tedarikidir.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand image="/images/logistics.jpg" />
+</Base>

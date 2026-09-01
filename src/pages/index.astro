@@ -1,0 +1,384 @@
+---
+import Base from "../layouts/Base.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { company } from "../data/site";
+---
+
+<Base
+  title="CNK Endüstriyel | Akaryakıt ve Endüstriyel Ürün Tedariki"
+  description="CNK Endüstriyel, Tuzla merkezli; sıvı yakıtlar ve ilgili ürünlerin toptan ticareti alanında faaliyet gösteren kurumsal bir tedarik ve dağıtım şirketidir."
+  path="/"
+  hero
+>
+  <div class="hero-screen">
+    <section class="hero">
+    <div class="hero-bg">
+      <img
+        src="/images/tanks.jpg"
+        alt="Endüstriyel yakıt depolama tankları"
+      />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="wrap hero-content">
+      <span class="kicker reveal">Endüstriyel tedarik & dağıtım</span>
+      <h1 class="reveal reveal-d1">
+        Akaryakıt ve endüstriyel ürünlerde güvenilir çözüm ortağınız
+      </h1>
+      <p class="reveal reveal-d2">
+        {company.legalName}, Tuzla’da kayıtlı olarak sıvı yakıtlar ve bunlarla
+        ilgili ürünlerin toptan ticareti alanında faaliyet gösterir. Kurumsal
+        müşterilere tedarik, dağıtım ve pazarlama odaklı bir iş modeli sunar.
+      </p>
+      <div class="hero-actions reveal reveal-d3">
+        <a class="btn btn-amber" href="/urunler">Ürünlerimizi İncele</a>
+        <a class="btn btn-ghost" href="/iletisim">Teklif Al</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust" aria-label="Faaliyet özeti">
+    <div class="wrap trust-grid">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 19V7l8-4 8 4v12H4z"></path>
+          <path d="M9 19v-6h6v6"></path>
+        </svg>
+        <span>Akaryakıt</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="16"></rect>
+          <path d="M3 10h18"></path>
+        </svg>
+        <span>Endüstriyel ürünler</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2" y="8" width="13" height="9"></rect>
+          <path d="M15 12h5l2 3v2h-7"></path>
+          <circle cx="6.5" cy="19" r="1.5"></circle>
+          <circle cx="17.5" cy="19" r="1.5"></circle>
+        </svg>
+        <span>Dağıtım</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 20V9l8-5 8 5v11"></path>
+          <path d="M9 20v-6h6v6"></path>
+        </svg>
+        <span>Tedarik</span>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <section class="about">
+    <div class="wrap about-grid">
+      <div class="media about-media">
+        <img
+          src="/images/plant.jpg"
+          alt="Endüstriyel üretim ve enerji tesisi"
+          loading="lazy"
+        />
+      </div>
+      <div class="about-copy">
+        <span class="kicker dark">Kurumsal</span>
+        <h2 class="section-title">Endüstriyel tedarikte güvenilir çözüm ortağınız</h2>
+        <p>
+          Şirket, İstanbul Ticaret Odası’nda faal üye olarak kayıtlıdır. Ana
+          faaliyet kodu, sıvı yakıtlar ve bunlarla ilgili ürünlerin toptan
+          ticaretini tanımlar. Bu çerçevede CNK Endüstriyel; perakende istasyon
+          işletmeciliği değil, kurumsal ölçekte tedarik ve pazarlama tarafında
+          konumlanır.
+        </p>
+        <dl class="about-meta">
+          <div>
+            <dt>Kayıtlı unvan</dt>
+            <dd>{company.legalName}</dd>
+          </div>
+          <div>
+            <dt>Merkez</dt>
+            <dd>{company.location}</dd>
+          </div>
+          <div>
+            <dt>Faaliyet sınıfı</dt>
+            <dd>NACE {company.nace} · {company.naceTitle}</dd>
+          </div>
+        </dl>
+        <a class="text-link" href="/kurumsal">Kurumsal yapımızı keşfedin →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="wrap section-head" style="padding-top: 96px;">
+      <span class="kicker dark">Ürünler</span>
+      <h2 class="section-title">Ürün ve çözüm gruplarımız</h2>
+      <p class="lead">
+        Aşağıdaki gruplar, şirketin kayıtlı faaliyet alanı ve unvanındaki iş
+        tanımıyla uyumludur. Güncel stok, spesifikasyon ve tedarik kapsamı
+        talep üzerine netleştirilir.
+      </p>
+    </div>
+
+    <article class="product-row">
+      <div class="media">
+        <img
+          src="/images/tanks.jpg"
+          alt="Akaryakıt depolama tankları"
+          loading="lazy"
+        />
+      </div>
+      <div class="product-copy">
+        <span class="num">01</span>
+        <h3>Akaryakıt ürünleri</h3>
+        <p>
+          Sıvı yakıtların toptan ticareti, şirketin resmi faaliyet sınıfının
+          merkezindedir. Kurumsal ihtiyaca göre ürün ve teslimat kapsamı
+          görüşülerek belirlenir.
+        </p>
+        <a class="text-link" href="/urunler/akaryakit">Detaylı incele →</a>
+      </div>
+    </article>
+
+    <article class="product-row reverse">
+      <div class="media">
+        <img
+          src="/images/industrial.jpg"
+          alt="Endüstriyel tesis ve proses hatları"
+          loading="lazy"
+        />
+      </div>
+      <div class="product-copy">
+        <span class="num">02</span>
+        <h3>Endüstriyel ürünler</h3>
+        <p>
+          Şirket unvanı, akaryakıtın yanı sıra endüstriyel ürün dağıtımı ve
+          pazarlamasını da kapsar. İlgili ürün grubu, işletme ihtiyacına göre
+          değerlendirilir.
+        </p>
+        <a class="text-link" href="/urunler/endustriyel">Detaylı incele →</a>
+      </div>
+    </article>
+
+    <article class="product-row">
+      <div class="media">
+        <img
+          src="/images/energy.jpg"
+          alt="Enerji altyapısı ve iletim hatları"
+          loading="lazy"
+        />
+      </div>
+      <div class="product-copy">
+        <span class="num">03</span>
+        <h3>Yakıt ve enerji çözümleri</h3>
+        <p>
+          Toptan yakıt tedariki, kurumsal işletmelerin kesintisiz operasyon
+          ihtiyacına yönelik bir çözüm alanıdır. Teklif süreci, talep ve teslim
+          koşullarının netleştirilmesiyle ilerler.
+        </p>
+        <a class="text-link" href="/urunler">Detaylı incele →</a>
+      </div>
+    </article>
+
+    <article class="product-row reverse">
+      <div class="media">
+        <img
+          src="/images/barrels.jpg"
+          alt="Endüstriyel varil ve ilgili ürün depolama"
+          loading="lazy"
+        />
+      </div>
+      <div class="product-copy">
+        <span class="num">04</span>
+        <h3>İlgili ürünler</h3>
+        <p>
+          Kayıtlı faaliyet sınıfı, sıvı yakıtların yanında madeni yağlar ve
+          benzeri ilgili ürünlerin toptan ticaretini de kapsayabilir. Mevcut
+          ürün listesi için bizimle iletişime geçin.
+        </p>
+        <a class="text-link" href="/iletisim">Detaylı incele →</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Hizmetler</span>
+        <h2 class="section-title">Kurumsal tedarik yaklaşımı</h2>
+        <p class="lead">
+          Unvanımızdaki dağıtım ve pazarlama tanımı, iş modelimizin omurgasını
+          oluşturur. Aşağıdaki başlıklar bu tanımla uyumlu genel hizmet
+          çerçevesidir.
+        </p>
+      </div>
+      <div class="service-list">
+        <article class="service-item">
+          <span class="num">01</span>
+          <h3>Tedarik</h3>
+          <p>
+            Kurumsal ölçekte sıvı yakıt ve ilgili ürün ihtiyacının doğru ürün
+            grubuyla karşılanması için talep netleştirilir.
+          </p>
+        </article>
+        <article class="service-item">
+          <span class="num">02</span>
+          <h3>Dağıtım</h3>
+          <p>
+            Ürünün doğru zamanda ilgili noktaya ulaştırılması, toptan ticaret
+            faaliyetinin doğal parçasıdır. Operasyon detayları talebe göre
+            planlanır.
+          </p>
+        </article>
+        <article class="service-item">
+          <span class="num">03</span>
+          <h3>Pazarlama</h3>
+          <p>
+            Şirket unvanındaki pazarlama faaliyetleri, ürün ve çözümlerin
+            kurumsal müşterilerle buluşturulmasını kapsar.
+          </p>
+        </article>
+        <article class="service-item">
+          <span class="num">04</span>
+          <h3>Kurumsal çözümler</h3>
+          <p>
+            Her işletmenin yakıt ve endüstriyel ürün ihtiyacı farklıdır.
+            Teklif, bu ihtiyaca uygun kapsamın belirlenmesiyle hazırlanır.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="distribution">
+    <div class="wrap dist-layout">
+      <div>
+        <span class="kicker dark">Dağıtım</span>
+        <h2 class="section-title">Doğru ürün, doğru zamanda</h2>
+        <p class="lead" style="margin: 20px 0 12px;">
+          Aşağıdaki adımlar, şirketin kesin operasyon protokolü değil; toptan
+          tedarik işinde izlenen genel bir hizmet yaklaşımı örneğidir.
+        </p>
+        <div class="dist-steps">
+          <article class="dist-step">
+            <span class="num">01</span>
+            <div>
+              <h3>Talebin belirlenmesi</h3>
+              <p>Ürün grubu, miktar ve teslim beklentisi netleştirilir.</p>
+            </div>
+          </article>
+          <article class="dist-step">
+            <span class="num">02</span>
+            <div>
+              <h3>Ürün tedariki</h3>
+              <p>İhtiyaca uygun ürün kapsamı değerlendirilir.</p>
+            </div>
+          </article>
+          <article class="dist-step">
+            <span class="num">03</span>
+            <div>
+              <h3>Planlama</h3>
+              <p>Teslim zamanı ve lojistik koşullar birlikte ele alınır.</p>
+            </div>
+          </article>
+          <article class="dist-step">
+            <span class="num">04</span>
+            <div>
+              <h3>Teslimat</h3>
+              <p>Anlaşılan kapsam doğrultusunda teslim süreci yürütülür.</p>
+            </div>
+          </article>
+        </div>
+        <a class="text-link" href="/dagitim" style="margin-top: 28px;">
+          Dağıtım yaklaşımını inceleyin →
+        </a>
+      </div>
+      <div class="media dist-media">
+        <img
+          src="/images/tanker.jpg"
+          alt="Yakıt tankeri ve kara yolu lojistiği"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="sectors">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker dark">Faaliyet alanı</span>
+        <h2 class="section-title">Toptan ve endüstriyel ölçek</h2>
+      </div>
+      <div class="sector-panel">
+        <div class="media">
+          <img
+            src="/images/warehouse.jpg"
+            alt="Endüstriyel depo ve lojistik alanı"
+            loading="lazy"
+          />
+        </div>
+        <div class="sector-copy">
+          <span class="kicker">Kayıtlı faaliyet</span>
+          <h3>Sıvı yakıtların toptan ticareti</h3>
+          <p>
+            CNK Endüstriyel, İTO Akaryakıt meslek grubunda Tuzla kaydıyla faal
+            görünmektedir. NACE kodu perakende istasyon satışını değil; sıvı
+            yakıtlar ve ilgili ürünlerin toptan ticaretini tanımlar.
+          </p>
+        </div>
+      </div>
+      <p class="sector-note">
+        Kamuya açık kayıtlarda şirketin hizmet verdiği müşteri sektörlerine
+        ilişkin doğrulanmış bir liste bulunmamaktadır. Bu nedenle sektör
+        başlıkları varsayılmadan, yalnızca tescilli faaliyet alanı esas
+        alınmıştır.
+      </p>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="wrap why-grid">
+      <div>
+        <span class="kicker dark">Yaklaşım</span>
+        <h2 class="section-title">Neden CNK?</h2>
+        <p class="lead" style="margin-top: 18px;">
+          Güven, abartılı rakamlardan değil; net faaliyet tanımı, kurumsal
+          kayıt ve ihtiyaca uygun iletişimden gelir.
+        </p>
+      </div>
+      <div class="why-list">
+        <article class="why-item">
+          <h3>Güvenilir tedarik</h3>
+          <p>
+            İş modeli, kayıtlı toptan ticaret faaliyetine dayanır. Ürün ve
+            teslim kapsamı şeffaf biçimde görüşülür.
+          </p>
+        </article>
+        <article class="why-item">
+          <h3>Profesyonel hizmet</h3>
+          <p>
+            Kurumsal müşterilerle çalışmaya uygun, sade ve net bir teklif
+            süreci hedeflenir.
+          </p>
+        </article>
+        <article class="why-item">
+          <h3>İhtiyaca uygun çözümler</h3>
+          <p>
+            Her talep aynı ürün setiyle cevaplanmaz. Önce ihtiyaç, sonra kapsam
+            belirlenir.
+          </p>
+        </article>
+        <article class="why-item">
+          <h3>Zamanında hizmet</h3>
+          <p>
+            Dağıtım, unvanımızın parçasıdır. Teslim beklentisi baştan
+            netleştirilir.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+</Base>

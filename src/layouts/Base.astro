@@ -1,0 +1,78 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  path?: string;
+  hero?: boolean;
+}
+
+const {
+  title,
+  description,
+  path = "/",
+  hero = false,
+} = Astro.props;
+
+const canonical = new URL(path, Astro.site).toString();
+const ogImage = new URL("/images/hero.jpg", Astro.site).toString();
+---
+
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class={hero ? "has-hero" : undefined}>
+    <a class="skip" href="#icerik">İçeriğe geç</a>
+    <Header />
+    <main id="icerik">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      const header = document.querySelector(".site-header");
+      const toggle = document.querySelector(".menu-toggle");
+      const onScroll = () => {
+        header?.classList.toggle("is-solid", window.scrollY > 24);
+      };
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+      toggle?.addEventListener("click", () => {
+        const open = document.body.classList.toggle("menu-open");
+        toggle.setAttribute("aria-expanded", String(open));
+        document.getElementById("mobile-nav")?.setAttribute("aria-hidden", String(!open));
+      });
+      document.querySelectorAll(".nav-mobile a").forEach((link) => {
+        link.addEventListener("click", () => {
+          document.body.classList.remove("menu-open");
+          toggle?.setAttribute("aria-expanded", "false");
+        });
+      });
+    </script>
+  </body>
+</html>

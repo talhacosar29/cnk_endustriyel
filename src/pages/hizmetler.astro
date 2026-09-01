@@ -1,0 +1,63 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+import CtaBand from "../components/CtaBand.astro";
+---
+
+<Base
+  title="Hizmetler | CNK Endüstriyel"
+  description="CNK Endüstriyel’in tedarik, dağıtım, pazarlama ve kurumsal çözüm yaklaşımı. Şirket unvanı ve kayıtlı faaliyet alanıyla uyumlu hizmet çerçevesi."
+  path="/hizmetler"
+  hero
+>
+  <PageHero
+    kicker="Hizmetler"
+    title="Hizmetlerimiz"
+    text="Başlıklar, şirketin tescilli unvanındaki tedarik, dağıtım ve pazarlama tanımıyla uyumludur. Operasyon kapasitesine ilişkin sayısal iddia içermez."
+    image="/images/logistics.jpg"
+    alt="Lojistik ve yük taşıma operasyonu"
+  />
+
+  <section class="services" style="padding-top: 96px;">
+    <div class="wrap">
+      <div class="service-list">
+        <article class="service-item">
+          <span class="num">01</span>
+          <h3>Tedarik</h3>
+          <p>
+            Kurumsal yakıt ve ilgili ürün ihtiyacı, doğru ürün grubu ve teslim
+            beklentisi üzerinden ele alınır. Amaç, belirsiz katalog vaadi değil;
+            netleştirilmiş bir tedarik kapsamıdır.
+          </p>
+        </article>
+        <article class="service-item">
+          <span class="num">02</span>
+          <h3>Dağıtım</h3>
+          <p>
+            Dağıtım, şirket unvanının parçasıdır. Teslim noktası, zaman penceresi
+            ve ürün cinsi karşılıklı anlaşıldıktan sonra süreç planlanır.
+          </p>
+        </article>
+        <article class="service-item">
+          <span class="num">03</span>
+          <h3>Pazarlama</h3>
+          <p>
+            Pazarlama faaliyeti, ürün ve çözümlerin kurumsal müşterilerle
+            buluşturulmasını kapsar. Bu demo saha, şirketin dijital kurumsal
+            temsilini güçlendirmek için hazırlanmıştır.
+          </p>
+        </article>
+        <article class="service-item">
+          <span class="num">04</span>
+          <h3>Kurumsal çözümler</h3>
+          <p>
+            Her talep aynı yanıtı gerektirmez. Teklif; ürün, miktar ve teslim
+            koşullarının birlikte değerlendirilmesiyle şekillenir.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand image="/images/trucks.jpg" />
+</Base>

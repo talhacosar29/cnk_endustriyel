@@ -1,0 +1,58 @@
+---
+import { company } from "../data/site";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="logo" href="/">
+        <svg class="logo-mark" viewBox="0 0 42 42" aria-hidden="true">
+          <rect width="42" height="42" fill="#D99A32" />
+          <text
+            x="21"
+            y="27"
+            text-anchor="middle"
+            fill="#0B1726"
+            font-size="13"
+            font-family="Manrope, Inter, sans-serif"
+            font-weight="800"
+            letter-spacing="0.5">CNK</text>
+        </svg>
+        <span class="logo-text">
+          <strong>CNK</strong>
+          <span>Endüstriyel</span>
+        </span>
+      </a>
+      <p class="footer-copy">
+        {company.legalName} Tuzla, İstanbul merkezli; sıvı yakıtlar ve ilgili
+        ürünlerin toptan ticareti alanında faaliyet gösteren kurumsal bir
+        şirkettir.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Kurumsal</h4>
+      <a href="/kurumsal">Hakkımızda</a>
+      <a href="/hizmetler">Hizmetler</a>
+      <a href="/dagitim">Dağıtım</a>
+      <a href="/sektorler">Sektörler</a>
+    </div>
+    <div class="footer-col">
+      <h4>Ürünler</h4>
+      <a href="/urunler">Ürün grupları</a>
+      <a href="/urunler/akaryakit">Akaryakıt ürünleri</a>
+      <a href="/urunler/endustriyel">Endüstriyel ürünler</a>
+    </div>
+    <div class="footer-col">
+      <h4>İletişim</h4>
+      <a href="/iletisim">Teklif talep et</a>
+      <p>{company.location}</p>
+      <p>{company.itoCommittee}</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© {year} {company.shortName}. Tüm hakları saklıdır.</span>
+    <span class="demo-note">Kurumsal website demosu</span>
+  </div>
+</footer>

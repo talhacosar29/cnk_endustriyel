@@ -1,0 +1,90 @@
+---
+import Base from "../../layouts/Base.astro";
+import PageHero from "../../components/PageHero.astro";
+import CtaBand from "../../components/CtaBand.astro";
+---
+
+<Base
+  title="Akaryakıt Ürünleri | CNK Endüstriyel"
+  description="CNK Endüstriyel, sıvı yakıtlar ve bunlarla ilgili ürünlerin toptan ticareti alanında kayıtlıdır. Akaryakıt ürün grupları ve tedarik yaklaşımı."
+  path="/urunler/akaryakit"
+  hero
+>
+  <PageHero
+    kicker="Ürünler"
+    title="Akaryakıt ürünleri"
+    text="Kayıtlı faaliyet sınıfımız sıvı yakıtlar ve bunlarla ilgili ürünlerin toptan ticaretini kapsar. Aşağıdaki başlıklar bu sınıfın genel ürün çerçevesidir; stok iddiası değildir."
+    image="/images/tanks.jpg"
+    alt="Akaryakıt depolama tankları"
+  />
+
+  <section class="page-block">
+    <div class="wrap split">
+      <div>
+        <span class="kicker dark">Toptan ticaret</span>
+        <h2 class="section-title">Kurumsal yakıt tedariki</h2>
+      </div>
+      <div class="prose">
+        <p>
+          CNK Endüstriyel, İstanbul Ticaret Odası Akaryakıt grubunda Tuzla
+          kaydıyla faal görünür. NACE 46.81.01 kodu, sıvı yakıtlar ve ilgili
+          ürünlerin <strong>toptan</strong> ticaretini tanımlar.
+        </p>
+        <p>
+          Bu nedenle ürün anlatımı, perakende pompa satışı diliyle değil;
+          kurumsal tedarik ve dağıtım diliyle kurgulanmıştır.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <article class="catalog-item">
+      <div class="media">
+        <img src="/images/tanker.jpg" alt="Akaryakıt tankeri" loading="lazy" />
+      </div>
+      <div class="catalog-copy">
+        <h2>Sıvı yakıtlar</h2>
+        <p>
+          Faaliyet sınıfının GİB sözlük karşılığında motorin, benzin, fuel oil,
+          gazyağı ve benzeri sıvı yakıtların toptan ticareti yer alır. Hangi
+          ürünlerin güncel olarak tedarik edilebildiği, talep sırasında
+          netleştirilir.
+        </p>
+        <p class="notice">
+          Kullanım, toptan yakıt ihtiyacı olan kurumsal işletmeler için
+          değerlendirilir. Spesifik müşteri sektörü varsayılmaz.
+        </p>
+      </div>
+    </article>
+    <article class="catalog-item">
+      <div class="media">
+        <img src="/images/barrels.jpg" alt="Yakıt ve ilgili ürün varilleri" loading="lazy" />
+      </div>
+      <div class="catalog-copy">
+        <h2>İlgili yakıt ürünleri</h2>
+        <p>
+          Aynı faaliyet sınıfı, madeni yağlar ve gres gibi ilgili ürünlerin
+          toptan ticaretini de kapsayabilir. Teknik spesifikasyonlar uydurulmaz;
+          ürün bilgisi talep üzerine paylaşılır.
+        </p>
+        <p class="notice">
+          Tedarik yaklaşımı: ihtiyacı dinlemek, uygun ürün grubunu belirlemek
+          ve teslim koşullarını karşılıklı netleştirmek.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <section class="page-block alt">
+    <div class="wrap" style="display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap; align-items:end;">
+      <div>
+        <span class="kicker dark">Teklif</span>
+        <h2 class="section-title">Güncel ürün kapsamı için bize yazın</h2>
+      </div>
+      <a class="btn btn-navy" href="/iletisim">Teklif Al</a>
+    </div>
+  </section>
+
+  <CtaBand image="/images/hero.jpg" />
+</Base>
